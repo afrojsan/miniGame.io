@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 900px;
+    height: 800px;
+}
+
+.squareContainer {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.square1,
+.square2,
+.square3,
+.square4 {
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+
+.square1{
+    background-color: white;
+}
+
+.square2{
+    background-color: white;
+}
+
+.square3{
+    background-color: white;
+}
+
+.square4{
+    background-color: white;
+}
+
+.color {
+    display: flex;
+    justify-content: center;
+}
+
+
+.startButton {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.startButton button{
+    width: 110px;
+    height: 35px;
+}
