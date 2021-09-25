@@ -28,6 +28,9 @@ const blue = 'blue';
 const green = 'green';
 const yellow = 'yellow';
 
+const won ='You win! play again?';
+const lose = 'You lose! play again?';
+const start = "Game Start!";
 
 function randomColorTextGenerator() {
     const random = Math.floor(Math.random() * 4)
@@ -45,21 +48,9 @@ function randomColorTextGenerator() {
 // set up game status win or lose
 function win(status) {
     if(status === 'win' ) {
-        startButton.innerHTML = "You win play again?"
+        startButton.innerHTML = won;
     }else if(status === 'lose') {
-        startButton.innerHTML = "You lose play again?"
-    }
-}
-
-
-// set up only click once
-function isClicked() {
-    if(startButton.innerHTML === "You win play again?" || 
-    startButton.innerHTML === "You lose play again?" || 
-    startButton.innerHTML === "Game Start!"){
-        return false;
-    }else{
-        return true;
+        startButton.innerHTML = lose;
     }
 }
 
@@ -110,43 +101,57 @@ startButton.onclick = () => {
 // set cant play when the square backgroundColor is white
 
 square1.onclick = () => {
-    if(document.querySelector('#square1').style.backgroundColor === color.innerHTML) {
-        win('win');
-    }else if (!isClicked()){
-        false
+    if (startButton.innerHTML === won){
+        false;
+    }else if(startButton.innerHTML === lose){
+        false;
+    }else if(startButton.innerHTML === start){
+        false;
     }else if(document.querySelector('#square1').style.backgroundColor !== color.innerHTML){
         win('lose');
+    }else if(document.querySelector('#square1').style.backgroundColor === color.innerHTML){
+        win('win');
     }
 }
     
 square2.onclick = () => {
-    if(document.querySelector('#square2').style.backgroundColor === color.innerHTML) {
-        win('win');
-    }else if (!isClicked()){
-        false
+    if (startButton.innerHTML === won){
+        false;
+    }else if(startButton.innerHTML === lose){
+        false;
+    }else if(startButton.innerHTML === start){
+        false;
     }else if(document.querySelector('#square2').style.backgroundColor !== color.innerHTML){
         win('lose');
+    }else if(document.querySelector('#square2').style.backgroundColor === color.innerHTML) {
+        win('win');
     }
 }
     
 square3.onclick = () => {
-    if(document.querySelector('#square3').style.backgroundColor === color.innerHTML) {
-        win('win');
-    }else if (!isClicked()){
-        false
+    if (startButton.innerHTML === won){
+        false;
+    }else if(startButton.innerHTML === lose){
+        false;
+    }else if(startButton.innerHTML === start){
+        false;
     }else if(document.querySelector('#square3').style.backgroundColor !== color.innerHTML){
         win('lose');
+    }else if(document.querySelector('#square3').style.backgroundColor === color.innerHTML) {
+        win('win');
     }
 }
     
 square4.onclick = () => {
-    if(document.querySelector('#square4').style.backgroundColor === color.innerHTML) {
-        win('win');
-    }else if (!isClicked()){
-        false
+    if (startButton.innerHTML === won){
+        false;
+    }else if(startButton.innerHTML === lose){
+        false;
+    }else if(startButton.innerHTML === start){
+        false;
     }else if(document.querySelector('#square4').style.backgroundColor !== color.innerHTML){
         win('lose');
+    }else if(document.querySelector('#square4').style.backgroundColor === color.innerHTML) {
+        win('win');
     }
 }
-
-
