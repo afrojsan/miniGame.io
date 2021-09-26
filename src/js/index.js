@@ -94,9 +94,14 @@ function randomColor() {
 
 // game Start button
 startButton.onclick = () => {
-    randomColor()
+    if(startButton.innerHTML === won || 
+        startButton.innerHTML === start || 
+        startButton.innerHTML === lose){
+        randomColor();
+    }else if(startButton.innerHTML === "Good Luck!!"){
+        false();
+    }
 }
-
 
 // set cant play when the square backgroundColor is white
 
